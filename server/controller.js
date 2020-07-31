@@ -3,6 +3,7 @@ let id = 6
 
 module.exports = {
   getJournal: (req, res) => {
+    console.log( `get journal request`)
     res.status(200).send(journal);
   },
   createEntry: (req, res) => {

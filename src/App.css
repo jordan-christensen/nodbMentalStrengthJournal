@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+ :root {
+  --darkGray: #404041;
+  --middleGray: #6d6e70;
+  --highGray: #808184;
+  --white: #ffffff;
+  --subWhite: #f1f1f1;
+
+  --motivation: #6ac920;
+  --anxiety: #52c03d;
+  --concentration: #39b759;
+  --confidence: #21ae76;
+  --decisionMaking: #08a592;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.twhite{color: white}
+.tsubWhite{color: var(--subWhite)}
+.tdarkGray{color: var(--darkGray)}
+.thighGray{color: var(--highGray)}
+.tmotiv{color: var(--motivation)}
+.tanx{color: var(--anxiety)}
+.tconc{color: var(--concentration)}
+.tconf{color: var(--confidence)}
+.tdm{color: var(--decisionMaking)}
+
+.bc-white{background-color: white}
+.bc-subWhite{background-color: var(--subWhite)}
+.bc-darkGray{background-color: var(--darkGray)}
+.bc-middleGray{background-color: var(--middleGray)}
+.bc-darkGray{background-color: var(--darkGray)}
+.bc-highGray{background-color: var(--highGray)}
+.bc-motiv{background-color: var(--motivation)}
+.bc-anx{background-color: var(--anxiety)}
+.bc-conc{background-color: var(--concentration)}
+.bc-conf{background-color: var(--confidence)}
+.bc-dm{background-color: var(--decisionMaking)}
+
+.t10{font-size: 10pt;}
+.t12{font-size: 12pt;}
+.t14{font-size: 14pt;}
+.t16{font-size: 16pt;}
+.t18{font-size: 18pt;}
+.t20{font-size: 20pt;}
+.t21{font-size: 21pt;}
+.t22{font-size: 22pt;}
+.t48{font-size: 48pt;}
+
+body {
+  height: 100vh;
+  background-color: var(--middleGray); 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  height: 80px;
+  width: 100vw;
+  background-color: var(--darkGray);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-title {
+  font-family: 'Roboto Slab';
+  font-weight: 400;
 }
