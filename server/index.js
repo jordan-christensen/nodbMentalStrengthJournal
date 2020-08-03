@@ -8,6 +8,6 @@ app.use(express.json());
 app.get("/api/journal", ctrl.getJournal)
 app.post("/api/journal", ctrl.createEntry)
 app.delete("/api/journal/:id", ctrl.deleteEntry)
-// app.put("/api/journal/edit/:id")
+app.put("/api/journal/reviewed/:id", ctrl.entryReviewed)
 
 app.listen(port, () => console.log(`Synapses firing on port ${port}`))

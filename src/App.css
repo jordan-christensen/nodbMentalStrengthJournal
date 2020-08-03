@@ -258,6 +258,12 @@ body {
   filter: invert(.8);
 }
 
+.reviewed {
+  margin-left: 0px;
+  margin-right: 17px;
+  color: chartreuse;
+}
+
 .entry-body {
   width: 100%;
   height: auto;

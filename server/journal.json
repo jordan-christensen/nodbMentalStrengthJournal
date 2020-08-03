@@ -12,7 +12,8 @@
     "conc": 6.7,
     "conf": 7.4,
     "dm": 4.5,
-    "note": ""
+    "note": "",
+    "reviewed": false
   },
   {
     "id": 2,
@@ -27,7 +28,8 @@
     "conc": 4.7,
     "conf": 8.5,
     "dm": 9.8,
-    "note": ""
+    "note": "",
+    "reviewed": false
   },
   {
     "id": 3,
@@ -42,7 +44,8 @@
     "conc": 2.0,
     "conf": 4.9,
     "dm": 5.4,
-    "note": "Today is my day! I'm making it happen today!"
+    "note": "Today is my day! I'm making it happen today!",
+    "reviewed": false
   },
   {
     "id": 4,
@@ -57,7 +60,8 @@
     "conc": 8.7,
     "conf": 10,
     "dm": 6.9,
-    "note": ""
+    "note": "",
+    "reviewed": false
   },
   {
     "id": 5,
@@ -72,7 +76,8 @@
     "conc": 3.6,
     "conf": 7.4,
     "dm": 8.5,
-    "note": "High stress training today. Lack of sleep and high pressure."
+    "note": "High stress training today. Lack of sleep and high pressure.",
+    "reviewed": false
   }
   
 ]

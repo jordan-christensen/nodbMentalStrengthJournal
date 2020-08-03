@@ -13,7 +13,8 @@ class Form extends React.Component {
       conc: "",
       conf: "",
       dm: "",
-      note: ""
+      note: "",
+      reviewed: false
     }
   }
 
@@ -47,9 +48,10 @@ class Form extends React.Component {
           conc: "",
           conf: "",
           dm: "",
-          note: ""
+          note: "",
+          reviewed: false
         })}}>
-        <img className="delete-icon delete-form" src={require('../images/delete-icon.svg')}/>
+        <img onClick={this.props.toggleForm} alt="delete" className="delete-icon delete-form" src={require('../images/delete-icon.svg')}/>
         <h1 className="form-title top-form-title-margin">OBJECTIVE</h1>  
         <input className="text-input"
           name="objective"

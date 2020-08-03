@@ -6,10 +6,12 @@ const deleteIcon = require("../images/delete-icon.svg");
 const Entry = (props) => {
   return( 
     <div className="entry">
+
       <div className="entry-header">
         <h1 className="entry-moment">{props.entry.date} – {props.entry.time}</h1>
         <div className="icon-container">
-          <img src={editIcon} className="edit-icon" alt="edit"/>
+          <img src={editIcon} className="edit-icon" alt="review" onClick={() => props.reviewEntry(props.entry.id)}/>
+          <h1 className="entry-moment reviewed">{!props.entry.reviewed ? null : "REVIEWED"}</h1>
           <img src={deleteIcon} className="delete-icon" alt="delete" onClick={() => props.deleteEntry(props.entry.id)}/>
         </div>  
       </div>

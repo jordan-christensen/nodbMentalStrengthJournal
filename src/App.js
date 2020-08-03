@@ -14,6 +14,9 @@ class App extends React.Component {
       formVisible: false
     }
     this.createEntry = this.createEntry.bind(this)
+    this.deleteEntry = this.deleteEntry.bind(this)
+    this.toggleForm = this.toggleForm.bind(this)
+    this.reviewEntry = this.reviewEntry.bind(this)
   }
   
   toggleForm = () => {
@@ -38,8 +41,10 @@ class App extends React.Component {
 
   createEntry = (e, entry) => {
     e.preventDefault()
-    axios.post('/api/journal', {entry})
+    console.log(entry)
+    axios.post('/api/journal', {...entry})
       .then( res => {
+        console.log(res.data)
         this.setState({
           journal: res.data
         })
@@ -55,6 +60,15 @@ class App extends React.Component {
     }).catch( err => console.log(err))
   }
 
+  reviewEntry = (id) => {
+    axios.put(`/api/journal/reviewed/${id}`)
+    .then( res => {
+      this.setState({
+        journal: res.data
+      })
+    }).catch( err => console.log(err))
+  }
+
   render(){
     console.log(this.state)
     return(
@@ -63,14 +77,14 @@ class App extends React.Component {
           <Header/>
         </div>
         <div>
-          <Feed journal={this.state.journal} deleteEntry={this.deleteEntry}/>
+          <Feed journal={this.state.journal} reviewEntry={this.reviewEntry} deleteEntry={this.deleteEntry}/>
         </div>
-        <div onClick={(e) => this.toggleForm(e)} className="new-entry-btn">NEW ENTRY</div>
-        { this.state.formVisible ? (
+        {/* <div onClick={this.toggleForm} className="new-entry-btn">NEW ENTRY</div>
+        { this.state.formVisible ? ( */}
           <div className="form-container">
-            <Form createEntry={this.createEntry}/>
+            <Form toggleForm={this.toggleForm} createEntry={this.createEntry}/>
           </div>
-        )  : null } 
+         {/* )  : null }  */}
       </div>
     );
   }
