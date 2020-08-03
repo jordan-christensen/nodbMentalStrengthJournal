@@ -7,6 +7,7 @@ module.exports = {
     res.status(200).send(journal);
   },
   createEntry: (req, res) => {
+    console.log(`HIT`)
     const { date, time, objective, plan, strengths, weakness, motiv, anx, conc, conf, dm, note } = req.body;
     if (!objective || !plan || !strengths || !weakness || !motiv || !anx || !conc || !conf || !dm ) {
       res.status(405).send(`Missing required information`)
@@ -30,5 +31,8 @@ module.exports = {
       id++;
       res.status(200).send(journal)
     }
+  },
+  deleteEntry: (req, res) => {
+    console.log(req.params)
   }
 }
